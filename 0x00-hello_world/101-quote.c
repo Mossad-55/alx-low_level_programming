@@ -1,26 +1,15 @@
 #include <stdio.h>
-#include <string.h>
 #include <unistd.h>
 
 /**
- * main - Entry point
- *
- * The function will output a string using a for loop
- * Return: 1 (standard error)
- * We have to use the unistd.h Library.
+ * main - Prints out the last part of a quote in the standard error.
+ * Return: 1 if success.
+ * We have to use the unistd.h library.
  */
+
 int main(void)
 {
-char *str;
-str = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
+	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 58);
 
-int i;
-for (i = 0; i < strlen(str); i++)
-{
-	putchar(str[i]);
-}
-putchar('\n');
-
-return (1);
-
+	return (1);
 }
