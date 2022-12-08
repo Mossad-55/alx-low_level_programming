@@ -14,7 +14,8 @@ int main(void)
 char *str;
 str = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
 
-for(int i = 0; i < strlen(str); i++)
+int i;
+for (i = 0; i < strlen(str); i++)
 {
 	putchar(str[i]);
 }
