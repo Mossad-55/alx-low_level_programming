@@ -8,17 +8,19 @@
 int main(void)
 {
 	unsigned long i, j, next, res;
+	int counter;
 
-	i = 0;
+	i = 0, counter = 0;
 	j = 1;
 	res = 0;
-	while (next < 4000000)
+	while (counter < 50)
 	{
 		next = i + j;
 		i = j;
 		j = next;
-		if (next % 2 == 0)
+		if (next % 2 == 0 && next < 4000000)
 			res += next;
+		counter++;
 	}
 	printf("%lu\n", res);
 
