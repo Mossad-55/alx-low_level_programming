@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char* srt;
+	char *srt;
 	int i;
 
 	str = "_putchar";
