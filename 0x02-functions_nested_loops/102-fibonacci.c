@@ -6,15 +6,22 @@
  */
 int main(void)
 {
-	int i, res;
+	unsigned long i, j, next, counter;
 
-	res = 0;
-	for (i = 0; i <= 50; i++)
+	i = 0;
+	j = 1;
+	for (i = 0; i < 50; i++)
 	{
-		res += i;
-		printf("%d, ", res);
+		next = i + j;
+		i = j;
+		j = next;
+
+		printf("%lu", next);
+		if (n == 49)
+			printf("\n");
+		else
+			printf(", ");
 	}
-	printf("\n");
 
 	return (0);
 }
