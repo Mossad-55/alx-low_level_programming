@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include "main.h"
 /**
  * main - Entry point
  * Printing the word "_putchar" followed by a new line
