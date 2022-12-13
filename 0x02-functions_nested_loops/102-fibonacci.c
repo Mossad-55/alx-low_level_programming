@@ -10,7 +10,7 @@ int main(void)
 
 	i = 0;
 	j = 1;
-	for (counter = 0; counter < 50; i++)
+	for (counter = 0; counter < 50; counter++)
 	{
 		next = i + j;
 		i = j;
