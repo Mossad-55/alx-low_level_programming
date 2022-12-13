@@ -10,14 +10,14 @@ int main(void)
 
 	i = 0;
 	j = 1;
-	for (i = 0; i < 50; i++)
+	for (counter = 0; counter < 50; i++)
 	{
 		next = i + j;
 		i = j;
 		j = next;
 
 		printf("%lu", next);
-		if (n == 49)
+		if (counter == 49)
 			printf("\n");
 		else
 			printf(", ");
