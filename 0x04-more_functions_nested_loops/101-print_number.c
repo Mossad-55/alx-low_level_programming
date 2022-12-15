@@ -8,33 +8,29 @@
  */
 void print_number(int n)
 {
-	int temp_n1, temp_n2;
-	int num_of_digit, mod;
+	unsigned int temp1, temp2;
+	int i, j, tens;
 
-	num_of_digit = 1;
-	mod = 1;
+	i = 1;
+	tens = 1;
 	if (n < 0)
 	{
 		n *= -1;
 		_putchar('-');
 	}
-
-	temp_n1 = n;
-	temp_n2 = n;
-
-	while (temp_n1 >= 10)
+	temp1 = n;
+	temp2 = n;
+	while (temp1 >= 10)
 	{
-		temp_n1 /= 10;
-		num_of_digit++;
+		temp1 = temp1 / 10;
+		i++;
 	}
-
-	while (num_of_digit--)
-		mod *= 10;
-
-	while (mod > 1)
+	for (j = 1; j < i; j++)
+		tens = tens * 10;
+	while (tens > 1)
 	{
-		_putchar((temp_n2 / mod) % 10 + '0');
-		mod /= 10;
+		_putchar((temp2 / tens) % 10 + '0');
+		tens /= 10;
 	}
-	_putchar(temp_n2 % 10 + '0');
+	_putchar(temp2 % 10 + '0');
 }
