@@ -31,9 +31,10 @@ void print_number(int n)
 	while (num_of_digit--)
 		mod *= 10;
 
-	while (mod > 0)
+	while (mod > 1)
 	{
-		_putchar((temp_n2 % mod) + '0');
+		_putchar((temp_n2 / mod) % 10 + '0');
 		mod /= 10;
 	}
+	_putchar(temp_n2 % 10 + '0');
 }
