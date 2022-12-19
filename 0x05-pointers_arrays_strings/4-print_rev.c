@@ -3,21 +3,19 @@
 /**
  * print_rev - reverse a string.
  * @s: pointer points to a str.
+ * Allowed function: _putchar().
  * Return: void.
  */
 void print_rev(char *s)
 {
-	int i, j, temp;
+	int i;
 
-	j = 0;
-	while (s[j] != '\0')
-		j++;
-	j--;
-	for (i = 0; j > i; i++)
-	{
-		temp = s[i];
-		s[i] = s[j];
-		s[j] = temp;
-		j--;
-	}
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+
+	while (i--)
+		_putchar(s[i])
+
+	_putchar('\n');
 }
