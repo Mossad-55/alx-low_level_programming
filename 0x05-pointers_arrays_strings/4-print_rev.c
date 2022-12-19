@@ -13,7 +13,7 @@ void print_rev(char *s)
 	while (s[j] != '\0')
 		j++;
 	j--;
-	for (i = 0; i < j; i++)
+	for (i = 0; j > i; i++)
 	{
 		temp = s[i];
 		s[i] = s[j];
