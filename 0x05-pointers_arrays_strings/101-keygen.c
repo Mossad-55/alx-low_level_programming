@@ -1,33 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <string.h>
+#include <math.h>
 
 /**
- * main - generates a 9 digits of random number as password.
+ * main - generates a password.
  * Return: void.
  */
 int main(void)
 {
-	int i, n;
-	unsigned long int sum;
+	int ascii = 2772, i = 0, j, random;
 	char pass[100];
+	time_t t;
 
-	n = i = sum = 0;
-	char al[63] = "0123456789ABCDEFGHIJKLNMOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	srand(time(NULL));
-
-	while (sum < (2772 - 122))
+	srand((int) time(&t));
+	while (ascii > 126)
 	{
-		n = rand() % 62;
-		pass[i] = al[n];
-		sum += pass[i];
+		random = rand() % 126;
+		pass[i] = random;
+		ascii -= random;
 		i++;
 	}
-	n = 2772 - sum;
-	pass[i] = n;
-	pass[++i] = '\0';
-	printf("%s\n", pass);
+	if (ascii > 0)
+		pass[i] = ascii;
+	else
+		i--;
+
+	for (j = 0; j <= i; j++)
+		prtinf("%c", pass[j]);
 
 	return (0);
 }
