@@ -27,7 +27,7 @@ int main(void)
 		i--;
 
 	for (j = 0; j <= i; j++)
-		prtinf("%c", pass[j]);
+		printf("%c", pass[j]);
 
 	return (0);
 }
