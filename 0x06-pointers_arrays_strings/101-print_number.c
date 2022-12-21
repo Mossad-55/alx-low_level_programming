@@ -5,7 +5,7 @@
  * @n : is a number of type int.
  * Return: void.
  */
-void print_number(int n);
+void print_number(int n)
 {
 	unsigned int temp1, temp2;
 	int i, j, tens;
