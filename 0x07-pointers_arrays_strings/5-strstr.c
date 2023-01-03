@@ -9,23 +9,24 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i;
+	int *temp = needle;
+	bool found = true;
 
-	while (*haystack)
+	while (*haystack != '\0')
 	{
-		char *temp = haystack;
-		bool found = true;
-
-		for (i = 0; needle[i]; i++)
+		while (*needle != '\0')
 		{
-			if (temp[i] != needle[i])
+			if (*haystack != *needle)
 			{
 				found = false;
 				break;
 			}
+			needle++;
+			haystack++;
 		}
 		if (found)
-			return (temp);
+			return (haystack);
+		needle = temp;
 		haystack++;
 	}
 	return (NULL);
