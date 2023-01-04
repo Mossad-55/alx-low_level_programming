@@ -23,10 +23,8 @@ int _sqrt_check(int counter, int num)
  */
 int _sqrt_recursion(int n)
 {
-	if (y < 0)
-		return (-1);
-	if (y == 0)
-		return (1);
+	if (n == 0)
+		return (0);
 
-	return (x * _pow_recursion(x, y - 1));
+	return (_sqrt_check(1, n));
 }
