@@ -11,20 +11,21 @@ int len(char *s)
 		return (0);
 	return (1 + len(s + 1));
 }
+
 /**
  * palindrome_helper - a helper method.
  * @s: string (first param).
- * @start: int (second param).
- * @end: int (second param).
+ * @i: int (second param).
+ * @j: int (second param).
  * Return: int.
  */
-int palindrome_helper(char *s, int start,  int end)
+int palindrome_helper(char *s, int i,  int j)
 {
-	if (start > end)
+	if (i > j)
 		return (1);
-	if (s[start] != s[end])
+	if (s[i] != s[j])
 		return (0);
-	return (palindrome_helper(s, start + 1, end - 1));
+	return (palindrome_helper(s, i + 1, j - 1));
 }
 
 /**
@@ -34,9 +35,10 @@ int palindrome_helper(char *s, int start,  int end)
  */
 int is_palindrome(char *s)
 {
-	int length = len(s);
+	int length;
 
-	if (s == 1)
+	length = len(s);
+	if (length == 1 || length == 0)
 		return (1);
 
 	return (palindrome_helper(s, 0, length - 1));
