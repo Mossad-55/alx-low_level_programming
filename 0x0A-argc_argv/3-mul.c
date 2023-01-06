@@ -14,7 +14,7 @@ int get_number(char *s)
 	mult = 1;
 	while (*temp++ != '\0')
 		len++;
-	
+
 	while (counter < len - 1)
 	{
 		mult *= 10;
