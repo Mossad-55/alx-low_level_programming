@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * get_number - multiplies two arguments and print the result.
+ * get_number - convert a string to a number.
  * @s: string.
  * Return: int.
  */

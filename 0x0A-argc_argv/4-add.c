@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * get_number - multiplies two arguments and print the result.
+ * get_number - convert a string to a number.
  * @s: string.
  * Return: int.
  */
@@ -38,7 +38,7 @@ int get_number(char *s)
 }
 
 /**
- * main - multiplies two arguments and print the result.
+ * main - addes all the positive numbers
  * @argc: number of arguments
  * @argv: array of arguments
  *
