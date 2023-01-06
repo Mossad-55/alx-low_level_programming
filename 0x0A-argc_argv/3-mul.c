@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * get_number - multiplies two arguments and print the result.
@@ -7,13 +8,17 @@
  */
 int get_number(char *s)
 {
-	int len, mult, number, counter;
+	int len, mult, number, counter, flag;
 	char *temp = s;
 
 	len = number = counter = 0;
-	mult = 1;
+	mult = flag = 1;
 	while (*temp++ != '\0')
 		len++;
+
+	if (s[0] == '-')
+		flag == -1;
+	
 	while (counter < len - 1)
 	{
 		mult *= 10;
@@ -22,11 +27,17 @@ int get_number(char *s)
 	counter = 0;
 	while (counter < len)
 	{
-		number += (s[counter] - '0') * mult;
-		mult /= 10;
+		if (s[counter] != '-')
+		{
+			number += (s[counter] - '0') * mult;
+			mult /= 10;
+		}
 		counter++;
 	}
-	return (number);
+	if (s[0] == '-')
+		return ((number / 10) * -1);
+	else
+		return (number);
 }
 
 /**
