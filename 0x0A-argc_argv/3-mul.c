@@ -7,16 +7,13 @@
  */
 int get_number(char *s)
 {
-	int len, mult, number, counter, flag;
+	int len, mult, number, counter;
 	char *temp = s;
 
 	len = number = counter = 0;
-	mult = flag = 1;
+	mult = 1;
 	while (*temp++ != '\0')
 		len++;
-
-	if (s[0] == '-')
-		flag == -1;
 	
 	while (counter < len - 1)
 	{
