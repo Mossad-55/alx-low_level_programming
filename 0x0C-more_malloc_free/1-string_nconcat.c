@@ -40,7 +40,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		i++;
 	}
 
-	while (i < size)
+	while (i < size - 1)
 		new_string[i++] = s2[j++];
 
 	new_string[i] = '\0';
