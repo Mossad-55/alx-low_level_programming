@@ -1,15 +1,6 @@
 #include "3-calc.h"
 
 /**
- * error_func - prints Error followed by a new line.
- * Return: void
- */
-void error_func(void)
-{
-	printf("Error\n");
-}
-
-/**
  * main - program that perfroms simple operations
  * @argc: number of arguments
  * @argv: array of arguments
@@ -24,7 +15,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 4)
 	{
-		error_func();
+		printf("Error\n");
 		exit(98);
 	}
 
@@ -34,14 +25,14 @@ int main(int argc, char *argv[])
 	func = get_op_func(argv[2]);
 	if (func == NULL)
 	{
-		error_func();
+		printf("Error\n");
 		exit(98);
 	}
 
 	op = *argv[2];
 	if ((op == '/' || op == '%') && num2 == 0)
 	{
-		error_func();
+		printf("Error\n");
 		exit(98);
 	}
 
