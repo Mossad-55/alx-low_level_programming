@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 	}
 
 	res = func(num1, num2);
-	prtinf("%d\n", res);
+	printf("%d\n", res);
 
 	return (0);
 }
