@@ -18,8 +18,9 @@ void error_func(void)
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2;
+	int num1, num2, res;
 	int (*func)(int, int);
+	char op;
 
 	if (argc != 4)
 	{
@@ -37,13 +38,15 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	if ((*argv[2] == '/' || *argv[2] == '%') && num2 == 0)
+	op = *argv[2];
+	if ((op == '/' || op == '%') && num2 == 0)
 	{
 		error_func();
 		exit(98);
 	}
 
-	prtinf("%d\n", func(num1, num2));
+	res = func(num1, num2);
+	prtinf("%d\n", res);
 
 	return (0);
 }
