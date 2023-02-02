@@ -29,5 +29,6 @@ void print_binary(unsigned long int n)
 			printf("1");
 		else
 			printf("0");
+		shifts--;
 	}
 }
